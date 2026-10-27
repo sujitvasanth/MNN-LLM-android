@@ -13,6 +13,16 @@ The Java activity, JNI bridge, and MNN runtime are separate pieces. The three so
 - C++ standard: C++17
 - Models: downloaded at runtime; no model weights belong in this repository
 
+### MNN source version used for the reference APK
+
+The exact local source used for the reference build is the `MNN-master` directory from the working archive. It is a full source tree, not a Git checkout: it has no `.git` directory, so there is no upstream commit ID to record. The source archive is `MNN.zip` (the extracted tree is `MNN-master/`) with SHA-256:
+
+```text
+A786519AEB196C2FB1539E0028696BC14532810885760BDC0A8D16693A8BDF7A
+```
+
+That archive contains the original MNN source files used by the build, not a pointer or shortcut. A later rebuild should use that archive, or record a specific upstream MNN commit and verify its files against this snapshot.
+
 ## Build MNN
 
 Clone the upstream source into `MNN-master` (or set `MNN_SOURCE` below):
